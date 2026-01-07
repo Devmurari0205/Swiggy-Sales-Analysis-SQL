@@ -51,7 +51,7 @@ CREATE TABLE dim_dish (
 	Dish_Name VARCHAR(200)
 	);
 
--- FACT TABLE
+-- FACT TABLE-------
 
 CREATE TABLE fact_swiggy_orders (
 	order_id INT IDENTITY (1,1) PRIMARY KEY,
@@ -176,4 +176,5 @@ join dim_location l ON f.location_id = l.location_id
 join dim_restaurant r ON f.restaurant_id = r.restaurant_id
 JOIN dim_category c ON f.category_id = c.category_id
 JOIN dim_dish di ON f.dish_id = di.dish_id;
+
 
